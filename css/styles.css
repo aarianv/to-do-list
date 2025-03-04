@@ -1,0 +1,215 @@
+:root {
+    --midnight-blue: #191970;
+    --pink: #da70d6;
+    --green-border: rgba(10, 200, 150, 0.9); /*I want a green border, so i allign to rgba to call the color function */
+    --purple-light: #6a5acd;
+    --green:#00ff7f;
+    --white: #ffffff;
+    --black: #000000; /*adding variables for colours i want to use later, this will make it easier to call them later on */
+
+}
+body {
+    display: flex;    /*I added this to make the page space quite nicely and evenly for whatever size the page maybe, so it is not inconsistent with whatever size you had it before */
+    flex-direction: column;
+    justify-content: space-between; 
+    margin : 0;
+    padding: 1px;
+    height: 100vh; /* I want this to take up the whole page */
+    align-items: center;
+    background: #191919;
+    font-family: "Poppins", "sans-serif"
+}
+
+h1, h2, h3, h4, h5, h6 p{
+    margin: 0;
+}
+
+.todoL {
+    min-width: 50vh;
+    min-height: 100vh;
+    padding: 10px;
+    padding-top: 2vh;
+}
+.toDoList-app {
+    border-radius: 3rem;
+    max-width: 52vh;
+    padding: 4vh;
+    margin: auto;
+    background: white;
+    align-items: center;
+    position: sticky;
+    
+}
+
+.toDoList-app h1 {
+    text-align: center;
+    color: #191919;
+    height: 5rem;
+    display: flex;
+}
+
+.input {
+    position: relative;
+    display:flex;
+}
+.text-bar {
+    width: 100%;
+    border: 0.05rem solid #191919;
+    border-radius: 0.5rem;
+    padding: 3%;
+    font-size: small;
+    margin-bottom: 20px;
+    padding-right: 40px;
+    min-height: 2.5vh;
+}
+.btn_1 {
+    top: 35%; /*did all this to try and align my 'more' button inside of the enter a new to do button as it would look neat there */
+    right: 2%;
+    padding: 15px 20px;
+    display: flex;
+    position: absolute;
+    font-size: small;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background-color: #191919;
+    min-height: 2.5vh;
+}
+.slogan{
+    text-align: center;
+    font-size: small;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    overflow-y: scroll; /* this is for when you add items to the list you can scroll down, so it won't take up all the available space on the screen */
+}
+li {
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    padding: 12px 8px 12px 50px;
+    font-size: 17px;
+    position: relative;
+}
+ul li {
+    user-select: none;
+    cursor: pointer;
+}
+ul li::before{
+   content: '';
+   position: absolute;
+   height: 28px;
+   width: 28px;
+   border-radius: 50%;
+   background-size: cover;
+   background-position: center;
+   top: 8px;
+   left: 8px;
+   background-image: url(../assets/empty.png) 
+}
+
+ul li.done {
+   color:#00ff7f;
+   text-decoration: line-through; 
+}
+ul li.done::before{
+    background-image: url(../assets/green_check.png)
+}
+
+ul li span{
+    position: absolute;
+    height: 38px;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    font-size: 20px;
+    color:#6a5acd;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%
+
+}
+ul li span:hover{
+    background:grey
+}
+
+#myList p {
+    color: black; /* all the things that have been written in the list will be in the color clack */
+}
+
+.disabled {
+    display: flex;
+    text-decoration: line-through; /*for when we need to check of things of our list */
+}
+
+input[type="check"]::before {
+    content: "\2713";
+    display: inline-block; 
+    width: 3%;
+    height: 3%;
+    text-align: center;
+    font-size: small;
+    border: 2% solid var(--green);
+    border-radius: 50%;
+    color: transparent; /*this is going to make a check box to tick of things */
+}
+ 
+.title-pic {
+    position: absolute;
+    right: 50px;
+    top: 10px;
+}
+.title-pic img{
+    border-radius: 50%;
+    width: 40px;
+    height: auto;
+    position: absolute;
+}
+.table-put {
+    top: 30px;
+    left: 10px;
+    position: absolute;
+    display: flex;
+}
+.table {
+    width:150px;
+    border-collapse: collapse;
+    display: flex;
+}
+
+.table th, td {
+    border: 2px solid black;
+    background-color: grey;
+    padding: 5px;
+    text-align: left;
+    font-size: small;
+}
+
+footer { 
+    text-align: center;
+    position: sticky;
+    padding: 8px;
+    width: 100%;
+    bottom: 0;
+    left:0;
+
+}
+
+.made-by {
+    font: bold;
+    font-size: small;
+
+}
+.author {
+    font: bold;
+    font-size: small;
+    color: white;
+}
+.cross {
+    color: #191919
+}
+
+
