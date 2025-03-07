@@ -1,6 +1,11 @@
 const listEnter = document.getElementById("toDoListEnter");
 const myLists = document.getElementById("myList");
 
+function deleteAll() {
+    myLists.innerHTML = '';
+    saveStorage();
+}
+
 //creates new element for list
 function taskElement(word) {
     const li = document.createElement("li");
