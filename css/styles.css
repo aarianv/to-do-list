@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6 p{
     padding-right: 40px;
     min-height: 2.5vh;
 }
-.btn_1 {
+.btn_1{
     top: 35%; /*did all this to try and align my 'more' button inside of the enter a new to do button as it would look neat there */
     right: 2%;
     padding: 15px 20px;
@@ -73,6 +73,18 @@ h1, h2, h3, h4, h5, h6 p{
     border-radius: 0.5rem;
     color: white;
     transform: translateY(-50%);
+    cursor: pointer;
+    background-color: #191919;
+    min-height: 2.5vh;
+}
+#btn_2 {
+    padding: 15px 15px;
+    display: flex;
+    margin: auto;
+    font-size: small;
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
     cursor: pointer;
     background-color: #191919;
     min-height: 2.5vh;
