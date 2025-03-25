@@ -14,9 +14,8 @@ body {
     justify-content: space-between; 
     margin : 0;
     padding: 1px;
-    height: 100vh; /* I want this to take up the whole page */
     align-items: center;
-    background: #191919;
+    background: black;
     font-family: "Poppins", "sans-serif"
 }
 
@@ -29,6 +28,7 @@ h1, h2, h3, h4, h5, h6 p{
     min-height: 100vh;
     padding: 10px;
     padding-top: 2vh;
+    flex-grow: 1;
 }
 .toDoList-app {
     border-radius: 3rem;
@@ -38,7 +38,7 @@ h1, h2, h3, h4, h5, h6 p{
     background: white;
     align-items: center;
     position: sticky;
-    
+    min-height: 100px;
 }
 
 .toDoList-app h1 {
@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6 p{
 .text-bar {
     width: 100%;
     border: 0.05rem solid #191919;
-    border-radius: 0.5rem;
+    border-radius: 0.5rem 0rem 0rem 0.5rem;
     padding: 3%;
     font-size: small;
     margin-bottom: 20px;
@@ -63,19 +63,16 @@ h1, h2, h3, h4, h5, h6 p{
     min-height: 2.5vh;
 }
 .btn_1{
-    top: 35%; /*did all this to try and align my 'more' button inside of the enter a new to do button as it would look neat there */
-    right: 2%;
-    padding: 15px 20px;
-    display: flex;
-    position: absolute;
+    width: 30%;
+    border: 0.05rem solid #191919;
+    border-radius: 0rem 0.5rem 0.5rem 0rem ;
+    padding: 3%;
     font-size: small;
-    border: none;
-    border-radius: 0.5rem;
-    color: white;
-    transform: translateY(-50%);
+    margin-bottom: 20px;
+    min-height: 2.5vh;
     cursor: pointer;
     background-color: #191919;
-    min-height: 2.5vh;
+    color: white;
 }
 #btn_2 {
     padding: 15px 15px;
@@ -86,7 +83,7 @@ h1, h2, h3, h4, h5, h6 p{
     border-radius: 0.5rem;
     color: white;
     cursor: pointer;
-    background-color: #191919;
+    background-color: black;
     min-height: 2.5vh;
 }
 .slogan{
@@ -124,7 +121,7 @@ ul li::before{
 }
 
 ul li.done {
-   color:#00ff7f;
+   color: green;
    text-decoration: line-through; 
 }
 ul li.done::before{
@@ -169,40 +166,10 @@ input[type="check"]::before {
     color: transparent; /*this is going to make a check box to tick of things */
 }
  
-.title-pic {
-    position: absolute;
-    right: 50px;
-    top: 10px;
-}
-.title-pic img{
-    border-radius: 50%;
-    width: 40px;
-    height: auto;
-    position: absolute;
-}
-.table-put {
-    top: 30px;
-    left: 10px;
-    position: absolute;
-    display: flex;
-}
-.table {
-    width:150px;
-    border-collapse: collapse;
-    display: flex;
-}
-
-.table th, td {
-    border: 2px solid black;
-    background-color: grey;
-    padding: 5px;
-    text-align: left;
-    font-size: small;
-}
-
 footer { 
     text-align: center;
     position: sticky;
+    position: relative;
     padding: 8px;
     width: 100%;
     bottom: 0;
